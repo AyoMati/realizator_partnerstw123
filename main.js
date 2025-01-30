@@ -71,6 +71,11 @@ discord.gg/kupuj
 // Lista użytkowników partnerstwa i ich czas ostatniego partnerstwa
 const partneringUsers = new Map();
 const partnershipTimestamps = new Map();
+const channel_1 = '1252280791946235915';
+const channel_2 = '1242810199987716158';
+const channel_3 = '1210910952476905522';
+const channel_4 = '1332399570872832151';
+const channel_5 = '1001579382827143298';
 
 client.once('ready', () => {
   console.log(`Bot ${client.user.tag} jest gotowy.`);
@@ -89,13 +94,13 @@ client.once('ready', () => {
   // reklamowanie serwera
   const channelId_programming = '1252290252328927353';
   setInterval(async () => {
-    const channel = client.channels.cache.get(channelId_programming);
+    const channel = client.channels.cache.get(channelId_programming, channel_1, channel_2, channel_3, channel_4, channel_5);
     if (channel) {
       await channel.send(serverAd);
     } else {
       console.error(`Nie znaleziono kanału o ID ${channelId_programming}`);
     }
-  }, 11 * 60 * 1000); // 6 minut w milisekundach
+  }, 11 * 60 * 1000); // 11 minut w milisekundach
 });
 /*
 client.on('messageCreate', async (message) => {
