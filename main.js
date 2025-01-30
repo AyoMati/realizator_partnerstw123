@@ -102,7 +102,7 @@ client.once('ready', () => {
     }
   }, 11 * 60 * 1000); // 11 minut w milisekundach
 });
-/*
+
 client.on('messageCreate', async (message) => {
   // Sprawdzenie, czy wiadomość pochodzi od innego użytkownika
   if (!message.guild && !message.author.bot && message.author.id !== client.user.id) {
@@ -185,6 +185,6 @@ client.on('error', (error) => {
 process.on('unhandledRejection', (error) => {
   console.error('Nieobsłużony błąd:', error);
 });
-*/
+
 // Logowanie do Discorda
 client.login(process.env.DISCORD_TOKEN);
