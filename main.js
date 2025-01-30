@@ -24,23 +24,48 @@ client.once('ready', () => {
 
 // Reklama serwera
 const serverAd = `
-**Jesteś doświadczonym programistą i szukasz forum, gdzie uzyskasz wsparcie i podzielisz się efektem swojej pracy? A może dopiero zaczynasz swoją przygodę z kodowaniem? Niezależnie od stopnia zaawansowania zapraszamy na nasz serwer programistyczny.**
+## 🛒 Kupuj.
+> 🚀 Najszybciej rozwijający się sklep na Discord.
+> Nie jest tak bez powodu.
 
-Co oferujemy:
-- pomoc programistyczną,
-- kanały dostosowane do różnych języków programistycznych,
-- sklep z itemami,
-- miejsce, gdzie znajdziesz ludzi z pasją,
-- stały rozwój serwera.
+**Przedstawiamy:**
+💎  **__KUPUJ__** - Centrum dla twoich zakupów.
+🤝 Nigdy nie było wygodniej, szybciej i taniej niż teraz.
 
-Kogo szukamy:
-- programistów,
-- administracji,
-- aktywnych użytkowników,
-- realizatorów partnerstw.
-https://discord.gg/9ZbKzvS4QE
-https://share.creavite.co/67646e7f0ae0e4f686a629f9.gif
-https://share.creavite.co/67646f950ae0e4f686a62a01.gif
+💡 **System, pozwalający odnaleźć twój wymarzony produkt w sekundy.**
+- 💫 Nie musisz wiedzieć, co chcesz zakupić. Zainspiruj się nami.
+
+⭐ **Zebraliśmy najbardziej doświadczonych sprzedawców - razem na jeden serwer.**
+- Odpowiemy na wszystkie twoje pytania praktycznie NATYCHMIASTOWO.
+
+✅ **Część naszego asortymentu:**
+- `🛒` N1tro BOOST oraz BASIC - wysyłane prezentem na twoje konto!
+-# W NAJNIŻSZEJ cenie jaką znajdziesz.
+- `🛒` Dekoracje, logo, konta... - do WIELU platform.
+-# Wyglądaj jak profesjonalista!
+- `🛒` Doładowania do gier (fortnite, roblox, brawl stars itd...)
+-# Mamy też Social Boosting - czyli np. obserwacje do instagram, tiktok...
+- `🛒` Najpopularniejsze GRY!
+-# Minecraft, GTA... ChatGPT? Jednak mamy ZDECYDOWANIE więcej niż gierki.
+- `🛒` Wymiany? Również mamy. I to z jakimi niskimi prowizjami!
+-# Wymieniać dalej? Sam dołącz i sprawdź.
+
+> 💪 **Mnóstwo darmowych konkursów, eventów...**
+~Jesteśmy zaufanym sklepem któremu zaufała **ogromna ilość** klientów, oferujemy zdecydowanie więcej.
+
+> 🌎 **Coś dla twojego serwera...**
+- Kojarzysz **PartnerAI**? Taka tam rewolucja w partnerstwach, tzw. **Automatyczny Realizator Partnerstw.**
+-# Szczegóły poznasz na serwerze.
+
+> 💡 **Tak, mamy najniższe możliwie ceny, ale nie tylko to się liczy.**
+Czas to pieniądz. Oszczędzimy Ci go. 
+Mamy zgrany zespół, pozwól nam polepszyć twoje doznania w świecie Discorda - jak i poza nim.
+-# `💸` Płacimy 0,60zł za partnerstwo!
+
+# ❗ TRWA KONKURS NA __500PLN__ KTÓRY KOŃCZY SIĘ: <t:1738339200:R>
+
+**Dołącz i sprawdź.**
+discord.gg/kupuj
 `;
 
 // Lista użytkowników partnerstwa i ich czas ostatniego partnerstwa
@@ -96,7 +121,7 @@ client.on('messageCreate', async (message) => {
         await message.channel.send(`✅ Wstaw naszą reklamę:\n${serverAd}`);
         await message.channel.send("⏰ Daj znać, gdy wstawisz reklamę!");
       } else if (message.content.toLowerCase().includes('wstawi') || message.content.toLowerCase().includes('już') || message.content.toLowerCase().includes('gotowe') || message.content.toLowerCase().includes('juz')) {
-        const guild = client.guilds.cache.get('1316466087570706432');
+        const guild = client.guilds.cache.get('1289583756620988518');
         if (!guild) {
           await message.channel.send("❕ Nie znaleziono serwera.");
           return;
@@ -108,9 +133,9 @@ client.on('messageCreate', async (message) => {
           return;
         }
 
-        const channel = guild.channels.cache.find(ch => ch.name === '💼・partnerstwa' && ch.isText());
+        const channel = guild.channels.cache.find(ch => ch.name === '〔🌎〕・partnerstwa' && ch.isText());
         if (!channel) {
-          await message.channel.send("Nie znaleziono kanału '💼・partnerstwa'.");
+          await message.channel.send("Nie znaleziono kanału '〔🌎〕・partnerstwa'.");
           return;
         }
 
