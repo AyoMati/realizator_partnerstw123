@@ -39,15 +39,15 @@ const serverAd = `
 - Odpowiemy na wszystkie twoje pytania praktycznie NATYCHMIASTOWO.
 
 ✅ **Część naszego asortymentu:**
-- `🛒` N1tro BOOST oraz BASIC - wysyłane prezentem na twoje konto!
+- 🛒 N1tro BOOST oraz BASIC - wysyłane prezentem na twoje konto!
 -# W NAJNIŻSZEJ cenie jaką znajdziesz.
-- `🛒` Dekoracje, logo, konta... - do WIELU platform.
+- 🛒 Dekoracje, logo, konta... - do WIELU platform.
 -# Wyglądaj jak profesjonalista!
-- `🛒` Doładowania do gier (fortnite, roblox, brawl stars itd...)
+- 🛒 Doładowania do gier (fortnite, roblox, brawl stars itd...)
 -# Mamy też Social Boosting - czyli np. obserwacje do instagram, tiktok...
-- `🛒` Najpopularniejsze GRY!
+- 🛒 Najpopularniejsze GRY!
 -# Minecraft, GTA... ChatGPT? Jednak mamy ZDECYDOWANIE więcej niż gierki.
-- `🛒` Wymiany? Również mamy. I to z jakimi niskimi prowizjami!
+- 🛒 Wymiany? Również mamy. I to z jakimi niskimi prowizjami!
 -# Wymieniać dalej? Sam dołącz i sprawdź.
 
 > 💪 **Mnóstwo darmowych konkursów, eventów...**
@@ -60,7 +60,7 @@ const serverAd = `
 > 💡 **Tak, mamy najniższe możliwie ceny, ale nie tylko to się liczy.**
 Czas to pieniądz. Oszczędzimy Ci go. 
 Mamy zgrany zespół, pozwól nam polepszyć twoje doznania w świecie Discorda - jak i poza nim.
--# `💸` Płacimy 0,60zł za partnerstwo!
+-# 💸 Płacimy 0,60zł za partnerstwo!
 
 # ❗ TRWA KONKURS NA __500PLN__ KTÓRY KOŃCZY SIĘ: <t:1738339200:R>
 
