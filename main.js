@@ -72,11 +72,11 @@ discord.gg/kupuj
 const partneringUsers = new Map();
 const partnershipTimestamps = new Map();
 const channel_1 = '1252280791946235915';
-const channel_2 = '1242810199987716158';
-const channel_3 = '1210910952476905522';
-const channel_4 = '1332399570872832151';
-const channel_5 = '1001579382827143298';
-const channel_6 = '1286351421691793466';
+const planeta = '1242810199987716158';
+const adzone = '1210910952476905522';
+const miasto = '1332399570872832151';
+const blyskawiczne = '1001579382827143298';
+const hyperAds = '1286351421691793466';
 
 client.once('ready', () => {
   console.log(`Bot ${client.user.tag} jest gotowy.`);
@@ -85,21 +85,8 @@ client.once('ready', () => {
   const serverId = '1175916293816332318';
   setInterval(async () => {
     const channel = client.channels.cache.get(channelId_partnerstwa);
-    const channel = client.channels.cache.get(channelId_programming);
-    const channel1 = client.channels.cache.get(channel_1);
-    const channel2 = client.channels.cache.get(channel_2);
-    const channel3 = client.channels.cache.get(channel_3);
-    const channel4 = client.channels.cache.get(channel_4);
-    const channel5 = client.channels.cache.get(channel_5);
-    const channel6 = client.channels.cache.get(channel_6);
     if (channel) {
       await channel.send(partnershipAd);
-      await channel1.send(partnershipAd);
-      await channel2.send(partnershipAd);
-      await channel3.send(partnershipAd);
-      await channel4.send(partnershipAd);
-      await channel5.send(partnershipAd);
-      await channel6.send(partnershipAd);
     
     } else {
       console.error(`Nie znaleziono kanału o ID ${channelId_partnerstwa}`);
@@ -108,26 +95,50 @@ client.once('ready', () => {
 
   // reklamowanie serwera
   const channelId_programming = '1252290252328927353';
+  //adzone
   setInterval(async () => {
-    const channel = client.channels.cache.get(channelId_programming);
-    const channel1 = client.channels.cache.get(channel_1);
-    const channel2 = client.channels.cache.get(channel_2);
-    const channel3 = client.channels.cache.get(channel_3);
-    const channel4 = client.channels.cache.get(channel_4);
-    const channel5 = client.channels.cache.get(channel_5);
-    const channel6 = client.channels.cache.get(channel_6);
+    
+    const channel1 = client.channels.cache.get(adzone);
+    
     if (channel) {
-      await channel.send(serverAd);
-      await channel1.send(serverAd);
-      await channel2.send(serverAd);
-      await channel3.send(serverAd);
-      await channel4.send(serverAd);
-      await channel5.send(serverAd);
-      await channel6.send(serverAd);
+      await channel1.send(partnershipAd);
+      
     } else {
       console.error(`Nie znaleziono kanału o ID ${channelId_programming}`);
     }
-  }, 11 * 60 * 1000); // 11 minut w milisekundach
+  }, 241 * 60 * 1000); //koniec
+
+  //blyskawiczne
+  setInterval(async () => {
+    const channel2 = client.channels.cache.get(blyskawiczne);
+    if (channel) {
+      await channel2.send(partnershipAd);
+    }
+  }, 121 * 60 * 1000); //koniec
+
+  //planeta
+  setInterval(async () => {
+    const channel3 = client.channels.cache.get(planeta);
+    if (channel) {
+      await channel3.send(partnershipAd);
+    }
+  }, 31 * 60 * 1000); //koniec
+
+  //miasto
+  setInterval(async () => {
+    const channel4 = client.channels.cache.get(miassto);
+    if (channel) {
+      await channel4.send(partnershipAd);
+    }
+  }, 121 * 60 * 1000); //koniec
+
+  //hyperAds
+  setInterval(async () => {
+    const channel5 = client.channels.cache.get(hyperAds);
+    if (channel) {
+      await channel5.send(partnershipAd);
+    }
+  }, 60 * 60 * 1000); //koniec
 });
 
 client.on('messageCreate', async (message) => {
