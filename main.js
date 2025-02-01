@@ -21,7 +21,7 @@ app.listen(PORT, () => {
 client.once('ready', () => {
   console.log(`Zalogowano jako ${client.user.tag}!`);
 });
-
+const partnershipAd = '# PARTNERSTWA PV'
 // Reklama serwera
 const serverAd = `
 ## 🛒 Kupuj.
@@ -85,9 +85,22 @@ client.once('ready', () => {
   const serverId = '1175916293816332318';
   setInterval(async () => {
     const channel = client.channels.cache.get(channelId_partnerstwa);
-    
+    const channel = client.channels.cache.get(channelId_programming);
+    const channel1 = client.channels.cache.get(channel_1);
+    const channel2 = client.channels.cache.get(channel_2);
+    const channel3 = client.channels.cache.get(channel_3);
+    const channel4 = client.channels.cache.get(channel_4);
+    const channel5 = client.channels.cache.get(channel_5);
+    const channel6 = client.channels.cache.get(channel_6);
     if (channel) {
-      await channel.send('# PARTNERSTWA PV');
+      await channel.send(partnershipAd);
+      await channel1.send(partnershipAd);
+      await channel2.send(partnershipAd);
+      await channel3.send(partnershipAd);
+      await channel4.send(partnershipAd);
+      await channel5.send(partnershipAd);
+      await channel6.send(partnershipAd);
+    
     } else {
       console.error(`Nie znaleziono kanału o ID ${channelId_partnerstwa}`);
     }
