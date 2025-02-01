@@ -100,7 +100,7 @@ client.once('ready', () => {
     
     const channel1 = client.channels.cache.get(adzone);
     
-    if (channel) {
+    if (channel1) {
       await channel1.send(partnershipAd);
       
     } else {
@@ -111,7 +111,7 @@ client.once('ready', () => {
   //blyskawiczne
   setInterval(async () => {
     const channel2 = client.channels.cache.get(blyskawiczne);
-    if (channel) {
+    if (channel2) {
       await channel2.send(partnershipAd);
     }
   }, 121 * 60 * 1000); //koniec
@@ -119,7 +119,7 @@ client.once('ready', () => {
   //planeta
   setInterval(async () => {
     const channel3 = client.channels.cache.get(planeta);
-    if (channel) {
+    if (channel3) {
       await channel3.send(partnershipAd);
     }
   }, 31 * 60 * 1000); //koniec
@@ -127,7 +127,7 @@ client.once('ready', () => {
   //miasto
   setInterval(async () => {
     const channel4 = client.channels.cache.get(miassto);
-    if (channel) {
+    if (channel4) {
       await channel4.send(partnershipAd);
     }
   }, 121 * 60 * 1000); //koniec
@@ -135,7 +135,7 @@ client.once('ready', () => {
   //hyperAds
   setInterval(async () => {
     const channel5 = client.channels.cache.get(hyperAds);
-    if (channel) {
+    if (channel5) {
       await channel5.send(partnershipAd);
     }
   }, 60 * 60 * 1000); //koniec
