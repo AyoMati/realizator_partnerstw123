@@ -76,6 +76,7 @@ const channel_2 = '1242810199987716158';
 const channel_3 = '1210910952476905522';
 const channel_4 = '1332399570872832151';
 const channel_5 = '1001579382827143298';
+const channel_6 = '1286351421691793466';
 
 client.once('ready', () => {
   console.log(`Bot ${client.user.tag} jest gotowy.`);
@@ -84,6 +85,7 @@ client.once('ready', () => {
   const serverId = '1175916293816332318';
   setInterval(async () => {
     const channel = client.channels.cache.get(channelId_partnerstwa);
+    
     if (channel) {
       await channel.send('# PARTNERSTWA PV');
     } else {
@@ -94,9 +96,21 @@ client.once('ready', () => {
   // reklamowanie serwera
   const channelId_programming = '1252290252328927353';
   setInterval(async () => {
-    const channel = client.channels.cache.get(channelId_programming, channel_1, channel_2, channel_3, channel_4, channel_5);
+    const channel = client.channels.cache.get(channelId_programming);
+    const channel1 = client.channels.cache.get(channel_1);
+    const channel2 = client.channels.cache.get(channel_2);
+    const channel3 = client.channels.cache.get(channel_3);
+    const channel4 = client.channels.cache.get(channel_4);
+    const channel5 = client.channels.cache.get(channel_5);
+    const channel6 = client.channels.cache.get(channel_6);
     if (channel) {
       await channel.send(serverAd);
+      await channel1.send(serverAd);
+      await channel2.send(serverAd);
+      await channel3.send(serverAd);
+      await channel4.send(serverAd);
+      await channel5.send(serverAd);
+      await channel6.send(serverAd);
     } else {
       console.error(`Nie znaleziono kanału o ID ${channelId_programming}`);
     }
