@@ -102,9 +102,6 @@ client.once('ready', () => {
     
     if (channel1) {
       await channel1.send(partnershipAd);
-      
-    } else {
-      console.error(`Nie znaleziono kanału o ID ${channelId_programming}`);
     }
   }, 241 * 60 * 1000); //koniec
 
@@ -126,7 +123,7 @@ client.once('ready', () => {
 
   //miasto
   setInterval(async () => {
-    const channel4 = client.channels.cache.get(miassto);
+    const channel4 = client.channels.cache.get(miasto);
     if (channel4) {
       await channel4.send(partnershipAd);
     }
