@@ -149,7 +149,7 @@ client.on('messageCreate', async (message) => {
           const notificationUser = await client.users.fetch('782647700403257375');
           await notificationUser.send(`Wymagane dołączenie na serwer:\n${userAd}`);
         }
-        const guild = client.guilds.cache.get('1289583756620988518');
+        const guild = client.guilds.cache.get('1327335941299241044');
         if (!guild) {
           await message.channel.send("❕ Nie znaleziono serwera.");
           return;
