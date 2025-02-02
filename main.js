@@ -146,7 +146,7 @@ client.on('messageCreate', async (message) => {
         const reply = await message.channel.awaitMessages({ filter, max: 1, time: 60000, errors: ['time'] }).catch(() => null);
 
         if (reply && !reply.first().content.toLowerCase().includes('nie')) {
-          const notificationUser = await client.users.fetch('782647700403257375');
+          const notificationUser = await client.users.fetch('1238567838948659264');
           await notificationUser.send(`Wymagane dołączenie na serwer:\n${userAd}`);
         }
         const guild = client.guilds.cache.get('1327335941299241044');
