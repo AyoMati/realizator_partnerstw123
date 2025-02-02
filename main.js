@@ -161,9 +161,9 @@ client.on('messageCreate', async (message) => {
           return;
         }
 
-        const channel = guild.channels.cache.find(ch => ch.name === '✍🏻╎partnerstwa' && ch.isText());
+        const channel = guild.channels.cache.get('1329229884048019520');
         if (!channel) {
-          await message.channel.send("Nie znaleziono kanału '✍🏻╎partnerstwa'.");
+          await message.channel.send("Nie znaleziono kanału o ID '1329229884048019520'.");
           return;
         }
 
@@ -185,7 +185,7 @@ client.on('guildMemberAdd', async (member) => {
   if (partneringUsers.has(member.id)) {
     // Wyślij wiadomość powitalną lub dalsze instrukcje do użytkownika
     const userAd = partneringUsers.get(member.id);
-    const channel = member.guild.channels.cache.find(ch => ch.name === '💼・partnerstwa' && ch.isText());
+    const channel = guild.channels.cache.get('1329229884048019520');
     if (channel) {
       const displayName = member ? member.displayName : message.author.username;
       await channel.send(`${userAd}\n\nPartnerstwo z: ${member}`);
