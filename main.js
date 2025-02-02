@@ -21,51 +21,30 @@ app.listen(PORT, () => {
 client.once('ready', () => {
   console.log(`Zalogowano jako ${client.user.tag}!`);
 });
-const partnershipAd = '# PARTNERSTWA PV'
+const partnershipAd = '# JEZELI CHCESZ PARTNERSTWO TO PISZ PV!'
 // Reklama serwera
 const serverAd = `
-## 🛒 Kupuj.
-> 🚀 Najszybciej rozwijający się sklep na Discord.
-> Nie jest tak bez powodu.
+## Taniej!
+> Twój **ULUBIONY** sklep na discordzie.
+> Wiesz **dlaczego?**
+## OFERUJEMY:
+🤝 ╎ Profesjonalne podejście do klienta, dzięki nam, dogodzimy ci i znajdziemy odpowiednie produkty, aby zadowolić ciebie, i zbytnio nie naruszać twojego budżetu!
 
-**Przedstawiamy:**
-💎  **__KUPUJ__** - Centrum dla twoich zakupów.
-🤝 Nigdy nie było wygodniej, szybciej i taniej niż teraz.
+💵 ╎Wiesz skąd wzięła się nazwa? Nie bez powodu nazywamy się **TANIEJ**
+- **Najtańsze ceny** w stosunku do rynku - to, to czego poszukiwałeś!
 
-💡 **System, pozwalający odnaleźć twój wymarzony produkt w sekundy.**
-- 💫 Nie musisz wiedzieć, co chcesz zakupić. Zainspiruj się nami.
+🤖╎Profesjonalne systemy w naszych botach, które umożliwiają na szerokiego zakresu udogodnienia. **Już nie musisz** szukać kanału ticket, możesz to zrobic z poziomu **cennika** __Oferujemy też bota, dodawanego do konta z ciekawymi opcjami! Sprawdź <#1334663153983815680> __
 
-⭐ **Zebraliśmy najbardziej doświadczonych sprzedawców - razem na jeden serwer.**
-- Odpowiemy na wszystkie twoje pytania praktycznie NATYCHMIASTOWO.
+🤑╎ Nie uwierze ci, że nigdy nie chciałeś sobie dorobić łatwych pieniędzy - **PŁACIMY REALIZATOROM PARTNERSTW __0.60PLN__ ZA JEDNO PARTNERSTWO**
 
-✅ **Część naszego asortymentu:**
-- 🛒 N1tro BOOST oraz BASIC - wysyłane prezentem na twoje konto!
--# W NAJNIŻSZEJ cenie jaką znajdziesz.
-- 🛒 Dekoracje, logo, konta... - do WIELU platform.
--# Wyglądaj jak profesjonalista!
-- 🛒 Doładowania do gier (fortnite, roblox, brawl stars itd...)
--# Mamy też Social Boosting - czyli np. obserwacje do instagram, tiktok...
-- 🛒 Najpopularniejsze GRY!
--# Minecraft, GTA... ChatGPT? Jednak mamy ZDECYDOWANIE więcej niż gierki.
-- 🛒 Wymiany? Również mamy. I to z jakimi niskimi prowizjami!
--# Wymieniać dalej? Sam dołącz i sprawdź.
+🟣╎ **N!tro?**, może **boosty?**, albo może macie jakieś **konta streamingowe?** A **chatgpt?** hmm... A co powiecie na **wymiane pieniędzy?** **__TAK!__ MAMY TO WSZYSTKO!**
 
-> 💪 **Mnóstwo darmowych konkursów, eventów...**
-~Jesteśmy zaufanym sklepem któremu zaufała **ogromna ilość** klientów, oferujemy zdecydowanie więcej.
+🦔╎**Zaufanie**, to nasza druga nazwa serwera, bo jesteśmy najbardziej **zaufanym** sklepem, na którym bez obaw - nie musisz sie bać o utracenie swoich środków **dołożymy wszelkich starań aby bylo __bezpiecznie i prosto__**
 
-> 🌎 **Coś dla twojego serwera...**
-- Kojarzysz **PartnerAI**? Taka tam rewolucja w partnerstwach, tzw. **Automatyczny Realizator Partnerstw.**
--# Szczegóły poznasz na serwerze.
+## SPRAWDZ I SIE PRZEKONAJ 
 
-> 💡 **Tak, mamy najniższe możliwie ceny, ale nie tylko to się liczy.**
-Czas to pieniądz. Oszczędzimy Ci go. 
-Mamy zgrany zespół, pozwól nam polepszyć twoje doznania w świecie Discorda - jak i poza nim.
--# 💸 Płacimy 0,60zł za partnerstwo!
-
-# ❗ TRWA KONKURS NA __500PLN__ KTÓRY KOŃCZY SIĘ: <t:1738339200:R>
-
-**Dołącz i sprawdź.**
-discord.gg/kupuj
+discord.gg/taniej
+# Poszukujemy realizatorów partnerstw - płacimy 0,60PLN z możliwymi bonusami
 `;
 
 // Lista użytkowników partnerstwa i ich czas ostatniego partnerstwa
