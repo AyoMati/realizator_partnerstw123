@@ -146,6 +146,7 @@ client.on('messageCreate', async (message) => {
         const reply = await message.channel.awaitMessages({ filter, max: 1, time: 60000, errors: ['time'] }).catch(() => null);
 
         if (reply && !reply.first().content.toLowerCase().includes('nie')) {
+          await message.channel.send("Jako bot nie mogę automatycznie dołączyć na serwer, ale jeśli masz 100 osób na serwerze to mój właściciel @ayomati1 niedługo na pewno to zrobi");
           const notificationUser = await client.users.fetch('1238567838948659264');
           await notificationUser.send(`Wymagane dołączenie na serwer:\n${userAd}`);
         }
