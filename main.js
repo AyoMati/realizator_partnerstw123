@@ -50,12 +50,12 @@ discord.gg/taniej
 // Lista użytkowników partnerstwa i ich czas ostatniego partnerstwa
 const partneringUsers = new Map();
 const partnershipTimestamps = new Map();
-const channel_1 = '1252280791946235915';
 const planeta = '1242810199987716158';
 const adzone = '1210910952476905522';
 const miasto = '1332399570872832151';
 const blyskawiczne = '1001579382827143298';
 const hyperAds = '1286351421691793466';
+const zimowe = '1252280791946235915';
 
 client.once('ready', () => {
   console.log(`Bot ${client.user.tag} jest gotowy.`);
@@ -64,9 +64,12 @@ client.once('ready', () => {
   const serverId = '1175916293816332318';
   setInterval(async () => {
     const channel = client.channels.cache.get(channelId_partnerstwa);
+    const zimowep = client.channels.cache.get(zimowe)
     if (channel) {
       await channel.send(partnershipAd);
-    
+    }
+    if (zimowep) {
+      await channel.send(partnershipAd);
     } else {
       console.error(`Nie znaleziono kanału o ID ${channelId_partnerstwa}`);
     }
