@@ -21,30 +21,38 @@ app.listen(PORT, () => {
 client.once('ready', () => {
   console.log(`Zalogowano jako ${client.user.tag}!`);
 });
-const partnershipAd = '# JEZELI CHCESZ PARTNERSTWO TO PISZ PV!'
+const partnershipAd = '# PV PO PARTNERSTWO'
 // Reklama serwera
 const serverAd = `
-## Taniej!
-> Twój **ULUBIONY** sklep na discordzie.
-> Wiesz **dlaczego?**
-## OFERUJEMY:
-🤝 ╎ Profesjonalne podejście do klienta, dzięki nam, dogodzimy ci i znajdziemy odpowiednie produkty, aby zadowolić ciebie, i zbytnio nie naruszać twojego budżetu!
+# 🚀 Flexify - Twój sklep Discord!
+> szybko, tanio i wygodnie. Zobacz, co dla Ciebie mamy!
 
-💵 ╎Wiesz skąd wzięła się nazwa? Nie bez powodu nazywamy się **TANIEJ**
-- **Najtańsze ceny** w stosunku do rynku - to, to czego poszukiwałeś!
+# Dlaczego Flexify?
 
-🤖╎Profesjonalne systemy w naszych botach, które umożliwiają na szerokiego zakresu udogodnienia. **Już nie musisz** szukać kanału ticket, możesz to zrobic z poziomu **cennika** __Oferujemy też bota, dodawanego do konta z ciekawymi opcjami! Sprawdź <#1334663153983815680> __
+### ⭐ ・Szeroki wybór – Nitro, gry, doładowania i więcej!
+### ⭐ ・Błyskawiczna obsługa – Zamówienia realizujemy szybko i sprawnie!
+### ⭐ ・Niskie ceny – Tylko najlepsze oferty na rynku!
+# Co znajdziesz w Flexify?
 
-🤑╎ Nie uwierze ci, że nigdy nie chciałeś sobie dorobić łatwych pieniędzy - **PŁACIMY REALIZATOROM PARTNERSTW __0.60PLN__ ZA JEDNO PARTNERSTWO**
+>  🛒 ・Nitro Boosty oraz Basic
+>  🛒 ・Personalizacja kont i dekoracje
+>  🛒 ・Doładowania do gier (Fortnite, Roblox, Brawl Stars...)
+>  🛒 ・Social Boosting – Zwiększ swoje zasięgi!
+>  🛒 ・Gry – Minecraft, GTA i inne hity!
+>  🛒 ・ Wymiany – Prosto i bezpiecznie!
+# Dlaczego warto?
 
-🟣╎ **N!tro?**, może **boosty?**, albo może macie jakieś **konta streamingowe?** A **chatgpt?** hmm... A co powiecie na **wymiane pieniędzy?** **__TAK!__ MAMY TO WSZYSTKO!**
+🔹・Konkursy i eventy – Czekają na Ciebie nagrody!
+🔹・PartnerAI – Automatyczne partnerstwa na Discordzie!
+🔹・Szybka pomoc – Zawsze gotowi, by Ci pomóc!
+# Czas to pieniądz!
+Z nami oszczędzisz czas i pieniądze. Zaufaj Flexify!
 
-🦔╎**Zaufanie**, to nasza druga nazwa serwera, bo jesteśmy najbardziej **zaufanym** sklepem, na którym bez obaw - nie musisz sie bać o utracenie swoich środków **dołożymy wszelkich starań aby bylo __bezpiecznie i prosto__**
+# 💸 0,60 zł za każde partnerstwo!
 
-## SPRAWDZ I SIE PRZEKONAJ 
 
-discord.gg/taniej
-# Poszukujemy realizatorów partnerstw - płacimy 0,60PLN z możliwymi bonusami
+Dołącz do nas teraz i sprawdź, co Flexify ma dla Ciebie!
+discord.gg/Flexify
 `;
 
 // Lista użytkowników partnerstwa i ich czas ostatniego partnerstwa
@@ -118,6 +126,8 @@ client.once('ready', () => {
       await channel5.send(partnershipAd);
     }
   }, 60 * 60 * 1000); //koniec
+
+  
 });
 
 client.on('messageCreate', async (message) => {
