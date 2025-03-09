@@ -55,81 +55,9 @@ Dołącz do nas teraz i sprawdź, co Flexify ma dla Ciebie!
 discord.gg/Flexify
 `;
 
-// Lista użytkowników partnerstwa i ich czas ostatniego partnerstwa
-const partneringUsers = new Map();
-const partnershipTimestamps = new Map();
-const planeta = '1242810199987716158';
-const adzone = '1210910952476905522';
-const miasto = '1332399570872832151';
-const blyskawiczne = '1001579382827143298';
-const hyperAds = '1286351421691793466';
-const zimowe = '1252280791946235915';
 
-client.once('ready', () => {
-  console.log(`Bot ${client.user.tag} jest gotowy.`);
-  // Wysyłanie wiadomości co 6 minut
-  const channelId_partnerstwa = '1252280791946235915';
-  const serverId = '1175916293816332318';
-  setInterval(async () => {
-    const channel = client.channels.cache.get(channelId_partnerstwa);
-    const zimowep = client.channels.cache.get(zimowe)
-    if (channel) {
-      await channel.send(partnershipAd);
-    }
-    if (zimowep) {
-      await channel.send(partnershipAd);
-    } else {
-      console.error(`Nie znaleziono kanału o ID ${channelId_partnerstwa}`);
-    }
-  }, 6 * 60 * 1000); // 6 minut w milisekundach
-
-  // reklamowanie serwera
-  const channelId_programming = '1252290252328927353';
-  //adzone
-  setInterval(async () => {
-    
-    const channel1 = client.channels.cache.get(adzone);
-    
-    if (channel1) {
-      await channel1.send(partnershipAd);
-    }
-  }, 241 * 60 * 1000); //koniec
-
-  //blyskawiczne
-  setInterval(async () => {
-    const channel2 = client.channels.cache.get(blyskawiczne);
-    if (channel2) {
-      await channel2.send(partnershipAd);
-    }
-  }, 121 * 60 * 1000); //koniec
-
-  //planeta
-  setInterval(async () => {
-    const channel3 = client.channels.cache.get(planeta);
-    if (channel3) {
-      await channel3.send(partnershipAd);
-    }
-  }, 31 * 60 * 1000); //koniec
-
-  //miasto
-  setInterval(async () => {
-    const channel4 = client.channels.cache.get(miasto);
-    if (channel4) {
-      await channel4.send(partnershipAd);
-    }
-  }, 121 * 60 * 1000); //koniec
-
-  //hyperAds
-  setInterval(async () => {
-    const channel5 = client.channels.cache.get(hyperAds);
-    if (channel5) {
-      await channel5.send(partnershipAd);
-    }
-  }, 60 * 60 * 1000); //koniec
 
   
-});
-
 client.on('messageCreate', async (message) => {
   // Sprawdzenie, czy wiadomość pochodzi od innego użytkownika
   if (!message.guild && !message.author.bot && message.author.id !== client.user.id) {
