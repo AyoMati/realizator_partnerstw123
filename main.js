@@ -1,4 +1,4 @@
-const { Client, Intents } = require('discord.js-selfbot-v13');
+const { Client } = require('discord.js-selfbot-v13');
 const express = require('express');
 const app = express();
 const PORT = 8080;
@@ -21,16 +21,22 @@ app.listen(PORT, () => {
 client.once('ready', () => {
   console.log(`Zalogowano jako ${client.user.tag}!`);
 
-  const serverAdChannels = [
-    '1346609266987110451', '1346609268375158834', '1346609275761332325', '1346609280291442708', '1346609283932094529'
-  ];
+  // Zmienne dla każdego kanału
+  const channel1 = '1346609266987110451';
+  const channel2 = '1346609268375158834';
+  const channel3 = '1346609275761332325';
+  const channel4 = '1346609280291442708';
+  const channel5 = '1346609283932094529';
+
   const partnershipAdChannel = '1346609247869337701';
 
-  // Funkcja wysyłania reklam serwerowych z opóźnieniem między kanałami
+  // Funkcja wysyłania reklam serwerowych
   const sendServerAd = async () => {
     console.log(`Rozpoczynam wysyłanie serverAd: ${new Date().toISOString()}`);
-    for (const channelId of serverAdChannels) {
-      try {
+
+    try {
+      const channelList = [channel1, channel2, channel3, channel4, channel5];
+      for (const channelId of channelList) {
         const channel = client.channels.cache.get(channelId);
         if (channel) {
           await channel.send(serverAd);
@@ -39,9 +45,9 @@ client.once('ready', () => {
         } else {
           console.error(`Nie znaleziono kanału o ID ${channelId}`);
         }
-      } catch (err) {
-        console.error(`Błąd wysyłania wiadomości na kanale ${channelId}:`, err);
       }
+    } catch (err) {
+      console.error(`Błąd podczas wysyłania reklamy:`, err);
     }
   };
 
@@ -64,11 +70,6 @@ client.once('ready', () => {
   // Harmonogram wysyłania reklam
   setInterval(sendServerAd, 11 * 60 * 1000); // 11 minut w milisekundach
   setInterval(sendPartnershipAd, 6 * 60 * 1000); // 6 minut w milisekundach
-});
-
-// Obsługa limitów API Discorda
-client.on('rateLimit', (info) => {
-  console.warn('Discord API rate limit:', info);
 });
 
 // Obsługa błędów
