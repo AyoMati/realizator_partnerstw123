@@ -21,14 +21,13 @@ app.listen(PORT, () => {
 client.once('ready', () => {
   console.log(`Zalogowano jako ${client.user.tag}!`);
 
-  // Lista kanałów do reklam
   const serverAdChannels = [
     '1346609266987110451', '1346609268375158834', '1346609275761332325', '1346609280291442708', '1346609283932094529'
   ];
   const partnershipAdChannel = '1346609247869337701';
 
-  // Wysyłanie serverAd co 11 minut
-  setInterval(async () => {
+  // Funkcja wysyłania reklam serwerowych z opóźnieniem między kanałami
+  const sendServerAd = async () => {
     console.log(`Rozpoczynam wysyłanie serverAd: ${new Date().toISOString()}`);
     for (const channelId of serverAdChannels) {
       try {
@@ -36,7 +35,7 @@ client.once('ready', () => {
         if (channel) {
           await channel.send(serverAd);
           console.log(`Wysłano reklamę na kanale: ${channelId}`);
-          await new Promise(resolve => setTimeout(resolve, 1000)); // Opóźnienie między kanałami
+          await new Promise(resolve => setTimeout(resolve, 1000)); // Opóźnienie między wysyłkami
         } else {
           console.error(`Nie znaleziono kanału o ID ${channelId}`);
         }
@@ -44,10 +43,10 @@ client.once('ready', () => {
         console.error(`Błąd wysyłania wiadomości na kanale ${channelId}:`, err);
       }
     }
-  }, 11 * 60 * 1000); // 11 minut w milisekundach
+  };
 
-  // Wysyłanie partnershipAd co 6 minut
-  setInterval(async () => {
+  // Funkcja wysyłania reklam partnerstwa
+  const sendPartnershipAd = async () => {
     console.log(`Rozpoczynam wysyłanie partnershipAd: ${new Date().toISOString()}`);
     const channel = client.channels.cache.get(partnershipAdChannel);
     if (channel) {
@@ -60,7 +59,16 @@ client.once('ready', () => {
     } else {
       console.error(`Nie znaleziono kanału o ID ${partnershipAdChannel}`);
     }
-  }, 6 * 60 * 1000); // 6 minut w milisekundach
+  };
+
+  // Harmonogram wysyłania reklam
+  setInterval(sendServerAd, 11 * 60 * 1000); // 11 minut w milisekundach
+  setInterval(sendPartnershipAd, 6 * 60 * 1000); // 6 minut w milisekundach
+});
+
+// Obsługa limitów API Discorda
+client.on('rateLimit', (info) => {
+  console.warn('Discord API rate limit:', info);
 });
 
 // Obsługa błędów
