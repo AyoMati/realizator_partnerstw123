@@ -29,15 +29,21 @@ client.once('ready', () => {
 
   // Wysyłanie serverAd co 11 minut
   setInterval(async () => {
-    for (const channelId of serverAdChannels) {
+  for (const channelId of serverAdChannels) {
+    try {
       const channel = client.channels.cache.get(channelId);
       if (channel) {
         await channel.send(serverAd);
+        console.log(`Wysłano reklamy na kanale: ${channelId}`);
       } else {
         console.error(`Nie znaleziono kanału o ID ${channelId}`);
       }
+    } catch (err) {
+      console.error(`Błąd wysyłania wiadomości na kanale ${channelId}:`, err);
     }
-  }, 11 * 60 * 1000); // 11 minut w milisekundach
+  }
+}, 11 * 60 * 1000); // 11 minut w milisekundach
+
 
   // Wysyłanie partnershipAd co 6 minut
   setInterval(async () => {
