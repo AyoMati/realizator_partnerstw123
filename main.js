@@ -37,11 +37,11 @@ client.once('ready', () => {
 
 
   const channelId_shops = '1346609275761332325';
-  const channelId_global = '1252285992396918835';
-  const zimoweall = '1252286465635782657';
-  const zimowethematic = '1252289621274923152';
+  const channelId_global = '1348329636056268911';
+  const zimoweall = '1346609268375158834';
+  const zimowethematic = '1346609283932094529';
   const zimoweeconomy = '1346609280291442708';
-  const zimowe6h = '1252301768394543207';
+  const zimowe6h = '1346609312042324060';
   setInterval(async () => {
     const channel = client.channels.cache.get(channelId_shops);
     const channel_global = client.channels.cache.get(channelId_global);
