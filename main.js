@@ -17,23 +17,26 @@ app.listen(PORT, () => {
   console.log(`Serwer pingujący działa na porcie ${PORT}`);
 });
 
+client.once('ready', () => {
+  console.log(`Zalogowano jako ${client.user.tag}!`);
+}
+
 // Obsługa zdarzeń Discorda
 client.once('ready', () => {
   console.log(`Bot ${client.user.tag} jest gotowy.`);
   // Wysyłanie wiadomości co 6 minut
-  const channelId_partnerstwa = '1252280791946235915';
+  const channelId_partnerstwa = '1346609247869337701';
   const serverId = '1175916293816332318';
   setInterval(async () => {
     const channel = client.channels.cache.get(channelId_partnerstwa);
     if (channel) {
-      await channel.send('# PARTNERSTWA PV');
+      await channel.send(partnershipAd);
     } else {
       console.error(`Nie znaleziono kanału o ID ${channelId_partnerstwa}`);
     }
   }, 6 * 60 * 1000); // 6 minut w milisekundach
 
-client.once('ready', () => {
-  console.log(`Zalogowano jako ${client.user.tag}!`);
+
 
   const channelId_shops = '1346609275761332325';
   const channelId_global = '1252285992396918835';
