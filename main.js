@@ -17,9 +17,7 @@ app.listen(PORT, () => {
   console.log(`Serwer pingujący działa na porcie ${PORT}`);
 });
 
-client.once('ready', () => {
-  console.log(`Zalogowano jako ${client.user.tag}!`);
-}
+
 
 // Obsługa zdarzeń Discorda
 client.once('ready', () => {
