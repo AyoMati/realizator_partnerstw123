@@ -17,7 +17,8 @@ app.listen(PORT, () => {
   console.log(`Serwer pingujący działa na porcie ${PORT}`);
 });
 
-
+const partneringUsers = new Map();
+const partnershipTimestamps = new Map();
 
 // Obsługa zdarzeń Discorda
 client.once('ready', () => {
