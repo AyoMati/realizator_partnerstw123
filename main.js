@@ -132,8 +132,8 @@ client.on('messageCreate', async (message) => {
         const reply = await message.channel.awaitMessages({ filter, max: 1, time: 60000, errors: ['time'] }).catch(() => null);
 
         if (reply && !reply.first().content.toLowerCase().includes('nie')) {
-          await message.channel.send("Mój właściciel @bRtech za niedługo dołączy.");
-          const notificationUser = await client.users.fetch('782647700403257375');
+          await message.channel.send("Mój właściciel @! AyoMati za niedługo dołączy.");
+          const notificationUser = await client.users.fetch('1238567838948659264');
           await notificationUser.send(`Wymagane dołączenie na serwer:\n${userAd}`);
         }
 
