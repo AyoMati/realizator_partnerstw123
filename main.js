@@ -19,57 +19,45 @@ app.listen(PORT, () => {
 
 // Obsługa zdarzeń Discorda
 client.once('ready', () => {
+  console.log(`Bot ${client.user.tag} jest gotowy.`);
+  // Wysyłanie wiadomości co 6 minut
+  const channelId_partnerstwa = '1252280791946235915';
+  const serverId = '1175916293816332318';
+  setInterval(async () => {
+    const channel = client.channels.cache.get(channelId_partnerstwa);
+    if (channel) {
+      await channel.send('# PARTNERSTWA PV');
+    } else {
+      console.error(`Nie znaleziono kanału o ID ${channelId_partnerstwa}`);
+    }
+  }, 6 * 60 * 1000); // 6 minut w milisekundach
+
+client.once('ready', () => {
   console.log(`Zalogowano jako ${client.user.tag}!`);
 
-  // Zmienne dla każdego kanału
-  const channel1 = '1346609266987110451';
-  const channel2 = '1346609268375158834';
-  const channel3 = '1346609275761332325';
-  const channel4 = '1346609280291442708';
-  const channel5 = '1346609283932094529';
-
-  const partnershipAdChannel = '1346609247869337701';
-
-  // Funkcja wysyłania reklam serwerowych
-  const sendServerAd = async () => {
-    console.log(`Rozpoczynam wysyłanie serverAd: ${new Date().toISOString()}`);
-
-    try {
-      const channelList = [channel1, channel2, channel3, channel4, channel5];
-      for (const channelId of channelList) {
-        const channel = client.channels.cache.get(channelId);
-        if (channel) {
-          await channel.send(serverAd);
-          console.log(`Wysłano reklamę na kanale: ${channelId}`);
-          await new Promise(resolve => setTimeout(resolve, 1000)); // Opóźnienie między wysyłkami
-        } else {
-          console.error(`Nie znaleziono kanału o ID ${channelId}`);
-        }
-      }
-    } catch (err) {
-      console.error(`Błąd podczas wysyłania reklamy:`, err);
-    }
-  };
-
-  // Funkcja wysyłania reklam partnerstwa
-  const sendPartnershipAd = async () => {
-    console.log(`Rozpoczynam wysyłanie partnershipAd: ${new Date().toISOString()}`);
-    const channel = client.channels.cache.get(partnershipAdChannel);
+  const channelId_shops = '1346609275761332325';
+  const channelId_global = '1252285992396918835';
+  const zimoweall = '1252286465635782657';
+  const zimowethematic = '1252289621274923152';
+  const zimoweeconomy = '1346609280291442708';
+  const zimowe6h = '1252301768394543207';
+  setInterval(async () => {
+    const channel = client.channels.cache.get(channelId_shops);
+    const channel_global = client.channels.cache.get(channelId_global);
+    const zimoweall1 = client.channels.cache.get(zimoweall);
+    const zimowethematic1 = client.channels.cache.get(zimowethematic);
+    const zimowetech1 = client.channels.cache.get(zimoweeconomy);
+    const zimowe6h1 = client.channels.cache.get(zimowe6h);
     if (channel) {
-      try {
-        await channel.send(partnershipAd);
-        console.log(`Wysłano partnershipAd na kanale: ${partnershipAdChannel}`);
-      } catch (err) {
-        console.error(`Błąd wysyłania partnershipAd:`, err);
-      }
+      await channel.send(serverAd);
+      await channel_global.send(serverAd);
+      await zimoweall1.send(serverAd);
+      await zimowethematic1.send(serverAd);
+      await zimowetech1.send(serverAd);
     } else {
-      console.error(`Nie znaleziono kanału o ID ${partnershipAdChannel}`);
+      console.error(`Nie znaleziono kanału o ID ${channelId_programming}`);
     }
-  };
-
-  // Harmonogram wysyłania reklam
-  setInterval(sendServerAd, 11 * 60 * 1000); // 11 minut w milisekundach
-  setInterval(sendPartnershipAd, 6 * 60 * 1000); // 6 minut w milisekundach
+  }, 11 * 60 * 1000); // 11 minut w milisekundach
 });
 
 // Obsługa błędów
