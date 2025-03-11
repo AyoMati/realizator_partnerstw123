@@ -80,24 +80,24 @@ const partnershipAd = '# PV PO PARTNERSTWO';
 
 const partnerWymagania = `
 #   Wymagania do bycia Realizatorem Partnerstw!
-  ##  <a:DiamondAnimated:1306686139104759962>  Oferujemy:
-<:cash:1345185951118524438>  Stawka 60 groszy za partnerstwo 
+  ##  💎  Oferujemy:
+💵  Stawka 60 groszy za partnerstwo 
 💥 Prywatne KONKURSY – do wygrania super nagrody! 🎉
 ⚙️ System automatycznego liczenia partnerstwa 
 💳 Zniżkę 5% dla aktywnych Realizatorów! 💸
 
-## <a:DiamondAnimated:1306686139104759962>   Wymagamy:
+## 💎   Wymagamy:
 🕵️‍♂️ Umiejętności szukania partnerów
 📜 Przestrzegania regulaminu Realizatorów 
 🔁 Minimalnie 7 partnerstw tygodniowo
 
-## <a:DiamondAnimated:1306686139104759962>    Regulamin Realizatora:
-<:arrow_right:1079493121362100274>   Partnerstwa tylko z serwerami 100+ 
-<:arrow_right:1231717450937274530>   Oznaczanie Partnera w tej samej wiadomości (musi być na serwerze) 
-<:arrow_right:1079493121362100274>  Partnerstwo z tym samym serwerem nie może się powtórzyć przez 3 dni 
-<:arrow_right:1231717450937274530>  Partnerstwa tylko z polskimi serwerami 
-<:arrow_right:1079493121362100274>   Z tym  samym partnerem, możesz zrobić max 3 partnerstwa na 3 dni 
-<:arrow_right:1231717450937274530>Wypłacamy od 15 partnerstw 
+## 💎    Regulamin Realizatora:
+➡️   Partnerstwa tylko z serwerami 100+ 
+➡️   Oznaczanie Partnera w tej samej wiadomości (musi być na serwerze) 
+➡️   Partnerstwo z tym samym serwerem nie może się powtórzyć przez 3 dni 
+➡️   Partnerstwa tylko z polskimi serwerami 
+➡️   Z tym  samym partnerem, możesz zrobić max 3 partnerstwa na 3 dni 
+➡️   Wypłacamy od 15 partnerstw 
 
  Dołącz do nas i bądź częścią naszego zespołu!
 `
