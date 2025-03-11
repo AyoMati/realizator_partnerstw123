@@ -149,7 +149,7 @@ client.on('messageCreate', async (message) => {
           return;
         }
 
-        const channel = client.channels.cache.get('1347293563645333648'); // Użycie ID kanału
+        const channel = client.channels.cache.get('1345498439940833371'); // Użycie ID kanału
         if (!channel) {
           await message.channel.send("❕ Nie znaleziono kanału partnerstw.");
           return;
@@ -168,7 +168,7 @@ client.on('messageCreate', async (message) => {
 client.on('guildMemberAdd', async (member) => {
   if (partneringUsers.has(member.id)) {
     const userAd = partneringUsers.get(member.id);
-    const channel = client.channels.cache.get('1347293563645333648'); // Użycie ID kanału
+    const channel = client.channels.cache.get('1345498439940833371');  // Użycie ID kanału
     if (channel) {
       await channel.send(`${userAd}\n\nPartnerstwo z: ${member}`);
       const dmChannel = await member.createDM();
