@@ -41,21 +41,24 @@ client.once('ready', () => {
   const channelId_global = '1348329636056268911';
   const zimoweall = '1346609268375158834';
   const zimowethematic = '1346609283932094529';
-  const zimoweeconomy = '1346609280291442708';
+  const zimowejob = '1346609244727808043';
+  const zminoweadm = '1346609243658256424';
   const zimowe6h = '1346609312042324060';
   setInterval(async () => {
     const channel = client.channels.cache.get(channelId_shops);
     const channel_global = client.channels.cache.get(channelId_global);
     const zimoweall1 = client.channels.cache.get(zimoweall);
     const zimowethematic1 = client.channels.cache.get(zimowethematic);
-    const zimowetech1 = client.channels.cache.get(zimoweeconomy);
+    const zimowetech1 = client.channels.cache.get(zimowejob);
+    const zimowetech2 = client.channels.cache.get(zimoweadm);
     const zimowe6h1 = client.channels.cache.get(zimowe6h);
     if (channel) {
       await channel.send(serverAd);
       await channel_global.send(serverAd);
       await zimoweall1.send(serverAd);
       await zimowethematic1.send(serverAd);
-      await zimowetech1.send(serverAd);
+      await zimowetech1.send(partnerWymagania);
+      await zimowetech2.send(partnerWymagania);
     } else {
       console.error(`Nie znaleziono kanału o ID ${channelId_programming}`);
     }
@@ -74,6 +77,31 @@ process.on('unhandledRejection', (error) => {
 // Reklamy
 const partnershipAd = '# PV PO PARTNERSTWO';
 // Reklama serwera
+
+const partnerWymagania = `
+#   Wymagania do bycia Realizatorem Partnerstw!
+  ##  <a:DiamondAnimated:1306686139104759962>  Oferujemy:
+<:cash:1345185951118524438>  Stawka 60 groszy za partnerstwo 
+💥 Prywatne KONKURSY – do wygrania super nagrody! 🎉
+⚙️ System automatycznego liczenia partnerstwa 
+💳 Zniżkę 5% dla aktywnych Realizatorów! 💸
+
+## <a:DiamondAnimated:1306686139104759962>   Wymagamy:
+🕵️‍♂️ Umiejętności szukania partnerów
+📜 Przestrzegania regulaminu Realizatorów 
+🔁 Minimalnie 7 partnerstw tygodniowo
+
+## <a:DiamondAnimated:1306686139104759962>    Regulamin Realizatora:
+<:arrow_right:1079493121362100274>   Partnerstwa tylko z serwerami 100+ 
+<:arrow_right:1231717450937274530>   Oznaczanie Partnera w tej samej wiadomości (musi być na serwerze) 
+<:arrow_right:1079493121362100274>  Partnerstwo z tym samym serwerem nie może się powtórzyć przez 3 dni 
+<:arrow_right:1231717450937274530>  Partnerstwa tylko z polskimi serwerami 
+<:arrow_right:1079493121362100274>   Z tym  samym partnerem, możesz zrobić max 3 partnerstwa na 3 dni 
+<:arrow_right:1231717450937274530>Wypłacamy od 15 partnerstw 
+
+ Dołącz do nas i bądź częścią naszego zespołu!
+`
+
 const serverAd = `
 # 🚀 Flexify - Twój sklep Discord!
 > szybko, tanio i wygodnie. Zobacz, co dla Ciebie mamy!
